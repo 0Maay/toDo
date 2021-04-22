@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color-light:#D705F2;
+    --color-dark: #011C26;
+    --color-second: #7C05F2;
+    --color-first: #BFF205;
+}
+
+body {
+    background: var(--color-dark);
+    color: var(--color-light);
+    font-family: 'Nunito', sans-serif;
+}
+
+main {
+    width: 90%;
+    max-width: 500px;
+    margin: 3rem auto;
+}
+
+h1 {
+    font-size: 4rem;
+    margin: 2rem 0;
+    text-align: center;
+    color:var(--color-first);
+    font-weight: 400;
+    text-shadow: 0rem 0rem 0.4rem var(--color-first);
+}
+
+h3 {
+    margin: 2rem 0;
+    font-size: 2rem;
+    text-align: center;
+    font-weight: 200;
+}
+
+h2{
+    color:var(--color-first);
+    font-weight: 200;
+    text-align: center;
+    text-shadow: 0rem 0rem 0.4rem var(--color-first);
+}
+
+input {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 200;
+    font-size: 1.5rem;
+    color: var(--color-first);
+    background-color: var(--color-dark);
+    padding: .5rem .5rem;
+    margin-top: .8rem;
+    margin-right: 1rem;
+    border: 0.1rem solid var(--color-light);
+    border-radius: 0.3rem;
+    outline: none;
+    box-shadow:var(--color-light) 0rem 0rem 0.8rem;
+    cursor: pointer;
+}
+
+input[type="time"]{
+    width: 50%; 
+}
+
+input[type="text"] {
+    display: block;
+    width: 100%;
+    padding: .5rem .5rem;
+    margin: 1rem 0rem;
+    cursor: text;
+}
+
+
+input[type="date"] {
+    width: 100%;
+    color: var(--color-first);
+    background-color: var(--color-dark);
+    padding: .5rem .5rem;
+    margin-top: .8rem;
+    border: 0.1rem solid var(--color-light);
+    border-radius: 0.3rem;
+    outline: none;
+    box-shadow:var(--color-light) 0rem 0rem 0.8rem;
+    cursor: pointer;
+}
+
+label {
+    display:block;
+}
+
+.labels{
+    display: flex;
+    justify-content: space-around;
+}
+
+form button {
+    display: block;
+    width: 100%;
+    outline: none;
+    background: var(--color-dark);
+    color:var(--color-first);
+    text-transform: uppercase;
+    font-weight: 200;
+    margin: 1rem 0;
+    font-size: 1rem;
+    border: 0.1rem solid var(--color-first);
+    padding: .6rem .6rem;
+    border-radius: 0.8rem;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+button:hover{
+    transform: scale(1.05);
+    text-shadow: 0rem 0rem 0.3rem var(--color-first);
+}
+
+#filters {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-bottom: 3rem;
+}
+
+#filters button {
+    background:var(--color-dark);
+    border: 0.1rem solid var(--color-light);
+    color:var(--color-first);
+    padding: .4rem;
+    font-size: 1rem;
+    outline: none;
+    font-weight: 200;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+#filters button:focus {
+    border: 0.1rem solid var(--color-first);
+}
+
+#todo-list {
+    display: grid;
+    grid-template-rows: 1fr;
+    gap: 1rem;
+}
+
+.todo {
+    font-size: 1.2rem;
+    font-weight: 400;
+    color:var(--color-first)
+}
+
+.todo .actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-top: .5rem;
+}
+
+.edit{
+    margin: 0.5rem 0.5rem 0.5rem 0rem ;
+    background:var(--color-dark);
+    border: 0.1rem solid var(--color-light);
+    color:var(--color-first);
+    padding: .4rem;
+    font-size: 1rem;
+    outline: none;
+    font-weight: 200;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.cancel{
+    color:var(--color-light);
+}
+
+.todo .actions .remove:hover{
+    color:var(--color-light);
+    text-shadow: 0rem 0rem 0.3rem var(--color-light);
+}
+
+.cancel:hover{
+    text-shadow: 0rem 0rem 0.3rem var(--color-light);
+}
+.todo .actions button {
+    background:var(--color-dark);
+    border: 0.1rem solid var(--color-light);
+    color:var(--color-first);
+    padding: .4rem;
+    font-size: 1rem;
+    outline: none;
+    font-weight: 400;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.todo .actions button:focus {
+    border: 2px solid var(--color-dark);
+}
+
+.todo .actions button:nth-child(2) {
+    background: var(--color-dark);
+    color: var(--color-first);
+    border: 0.1rem solid var(--color-light);
+}
+
+.todo .actions button:nth-child(2):focus {
+    border-color: var(--color-second);
+}
+
+input[type="checkbox"] {
+    display: inline-block;
+    margin-right: 1rem;
+}
+
+.infoTodo{
+    display: flex;
+    justify-content:space-between;
+}
+
+.dateTodo{
+    opacity: 70%;
+    text-shadow: 0rem 0rem 0.3rem var(--color-light);
+    color:var(--color-light)
+}
+
+.toDo {
+    font-weight: 700;
+    text-shadow: 0rem 0rem 0.2rem var(--color-first);
+}
+
